@@ -1,4 +1,5 @@
 import {
+  IsBoolean,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -19,9 +20,9 @@ export class UpdateProductDto {
   @CanBeUndefined()
   price: number;
 
-  @IsNumber()
+  @IsBoolean()
   @IsNotEmpty()
   @IsOptional()
   @CanBeUndefined()
-  quantity: number;
+  isInStock: boolean;
 }
